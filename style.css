@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(/img/background.png) no-repeat center center /cover;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    overflow-y: hidden;
+}
+
+button{
+    display: none;
+}
+
+#container{
+    height: 100vh;
+    position: relative;
+}
+
+.header-btns{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+label{
+    padding: 15px;
+    background-color: rgba(246, 190, 236, 0.383);
+    border-radius: 5px;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+label:hover{
+    opacity: .7;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.table{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table img{
+    position: absolute;
+    top: 700px;
+    width: 1200px;
+}
+
+.cake{
+    position: absolute;
+    width: 700px;
+}
+
+.candle{
+    position: absolute;
+    width: 30px;
+}
+
+.light{
+    position: absolute;
+    width: 30px;
+    animation-name: beforeBlow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beforeBlow{
+    0%{
+        transform: rotatez(0);
+    }
+
+    25%{
+        transform: rotatez(3deg);
+    }
+
+    75%{
+        transform: rotatez(-3deg);
+    }
+
+    100%{
+        transform: rotatez(0);
+        
+    }
+}
