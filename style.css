@@ -4,10 +4,10 @@
 }
 
 body{
-    background: url(/img/background.png) no-repeat center center /cover;
+    background: url(img/background.png) no-repeat center center /cover;
     background-size: cover;
     backdrop-filter: blur(8px);
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 button{
@@ -23,24 +23,53 @@ button{
     position: fixed;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
 }
 
-label{
-    padding: 15px;
-    background-color: rgba(246, 190, 236, 0.383);
+button{
+    border: none;
+    background-color: rgb(246, 190, 236);
     border-radius: 5px;
-    margin: 0px 5px;
+
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    opacity: .6;
+
+    margin: 35px 20px;
 }
 
-label:hover{
-    opacity: .7;
+button:hover{
+    opacity: 1;
     cursor: pointer;
     text-decoration: none;
 
 }
+
+
+button#cake-btn::before{
+    content:'🎂';
+    transform: scale(5);
+}
+
+button#candle-btn::before{
+    content:'🕯️';
+    transform: scale(5);
+}
+
+button#lighter-btn::before{
+    content:'🔥';
+    transform: scale(5);
+}
+
+button#clear-btn::before{
+    content:'🌬️';
+    transform: scale(5);
+}
+
 
 .table{
     position: relative;
