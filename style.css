@@ -30,20 +30,17 @@ button{
 
 button{
     border: none;
-    background-color: rgb(246, 190, 236);
-    border-radius: 5px;
+    background-color: transparent;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    opacity: .6;
-
     margin: 35px 20px;
 }
 
 button:hover{
-    opacity: 1;
+    opacity: .5;
     cursor: pointer;
     text-decoration: none;
 
@@ -65,9 +62,18 @@ button#lighter-btn::before{
     transform: scale(5);
 }
 
-button#clear-btn::before{
+button#blow-btn::before{
     content:'🌬️';
     transform: scale(5);
+}
+
+button#remove-btn{
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+    width: 60px;
+    height: 40px;
 }
 
 
@@ -79,14 +85,14 @@ button#clear-btn::before{
 }
 
 .table img{
-    position: absolute;
+    position: fixed;
     top: 700px;
-    width: 1200px;
+    width:1200px;
 }
 
 .cake{
     position: absolute;
-    width: 700px;
+    width: 500px;
 }
 
 .candle{
@@ -100,6 +106,16 @@ button#clear-btn::before{
     animation-name: beforeBlow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+
+.light.smoke{
+    width: 20px;
+    opacity: .5;
+    animation-name:  afterBlow;
+    animation-duration: 5s ;
+    animation-iteration-count: 1;
+
+
 }
 
 @keyframes beforeBlow{
@@ -119,4 +135,55 @@ button#clear-btn::before{
         transform: rotatez(0);
         
     }
+}
+
+@keyframes afterBlow{
+    0%{
+        opacity: .5;
+        height: 38.97px;
+        transform: rotateY(0);
+
+    }
+
+    100%{
+        top: 0;
+        opacity: 0;
+        height: 200px;
+        transform: rotateY(180deg);
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    button#cake-btn{
+        display: block;
+        color: black;
+        font-size: 60px;
+        padding: 30px;
+        opacity: .8;
+    }
+    button#cake-btn::before{
+        content:'No disponible para tablets o móviles, se recomienda ver desde el ordenador :)';
+    }
+
+    button#candle-btn::before{
+        display:none;
+    }
+    
+    button#lighter-btn::before{
+        display:none;
+    }
+    
+    button#clear-btn::before{
+        display:none;
+    }
+    
+
+    .table{
+        display:none;
+    }
+
+
+
 }
