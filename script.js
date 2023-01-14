@@ -33,15 +33,26 @@ blowBtn.addEventListener('click', function(){
 })
 
 
-container.addEventListener('click', function(e){
+window.addEventListener('click', function(e){
     if ((buttonClicked === 'cakeBtn')&&(e.target.matches('button')===false)){
-        const cake = document.createElement('img')
-        cake.src='img/chocolatecake_nb2.png'
-        cake.setAttribute('class', 'cake')
-        cake.style.left = (e.x-260) + 'px'
-        cake.style.top = (e.y-720) + 'px'
-
-        container.append(cake)
+        
+        if (window.screen.height <= 832){
+            const cake = document.createElement('img')
+            cake.src='img/chocolatecake_nb2.png'
+            cake.setAttribute('class', 'cake')
+            cake.style.left = (e.x-155) + 'px'
+            cake.style.top = (e.y-435) + 'px' 
+            container.append(cake)  
+        }else{
+            const cake = document.createElement('img')
+            cake.src='img/chocolatecake_nb2.png'
+            cake.setAttribute('class', 'cake')
+            cake.style.left = (e.x-260) + 'px'
+            cake.style.top = (e.y-720) + 'px' 
+            container.append(cake)   
+        }
+        
+        
     }else if ((buttonClicked === 'candleBtn')&&(e.target.matches('button')===false)&&(e.target.className === 'cake')){
         const candle = document.createElement('img')
         candle.src = 'img/candle2.png'

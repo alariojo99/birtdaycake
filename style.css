@@ -5,7 +5,6 @@
 
 body{
     background: url(img/background.png) no-repeat center center /cover;
-    background-size: cover;
     backdrop-filter: blur(8px);
     overflow: hidden;
 }
@@ -114,8 +113,10 @@ button#remove-btn{
     animation-name:  afterBlow;
     animation-duration: 5s ;
     animation-iteration-count: 1;
+}
 
-
+.aviso{
+    display: none;
 }
 
 @keyframes beforeBlow{
@@ -154,36 +155,106 @@ button#remove-btn{
     }
 }
 
+.audio{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 10px;
+}
+/*
+@media (max-width: 768px) {
+    
+    body{
+        background: none;
+    }
+
+    #container{
+        display: none;
+    }
+    .aviso{
+        background:url(img/background.png) no-repeat center center /cover;
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .aviso h1{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px;
+        padding: 15px;
+        background-color: rgba(183, 123, 176, 0.512);
+        border-radius: 30px;
+        color: white;
+        transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+        height: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+}
+*/
+
 @media (max-width: 768px) {
 
-    button#cake-btn{
-        display: block;
-        color: black;
-        font-size: 60px;
-        padding: 30px;
-        opacity: .8;
+    .table{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    
+    .table img{
+        position: fixed;
+        top: 611px;
+        width:500px;
+    }
+    
+    .cake{
+        width: 300px;
+    }
+    
+
+    .header-btns{
+        width: 100vw;
+        flex-direction: row;
+    }
+
+    button{
+        border: none;
+        background-color: transparent;
+
+        margin: 0px 20px;
+    }
+
     button#cake-btn::before{
-        content:'No disponible para tablets o móviles, se recomienda ver desde el ordenador :)';
+        content:'🎂';
+        transform: scale(3);
     }
 
     button#candle-btn::before{
-        display:none;
+        content:'🕯️';
+        transform: scale(3);
     }
-    
+
     button#lighter-btn::before{
-        display:none;
-    }
-    
-    button#clear-btn::before{
-        display:none;
-    }
-    
-
-    .table{
-        display:none;
+        content:'🔥';
+        transform: scale(3);
     }
 
+    button#blow-btn::before{
+        content:'🌬️';
+        transform: scale(3);
+    }
 
+    .audio{
+        justify-content: center;
+    }
 
 }
