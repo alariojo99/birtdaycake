@@ -34,13 +34,14 @@ blowBtn.addEventListener('click', function(){
 
 
 window.addEventListener('click', function(e){
+    console.log(e.x)
     if ((buttonClicked === 'cakeBtn')&&(e.target.matches('button')===false)){
         
-        if (window.screen.height <= 832){
+        if (window.screen.width <= 500){
             const cake = document.createElement('img')
             cake.src='img/chocolatecake_nb2.png'
             cake.setAttribute('class', 'cake')
-            cake.style.left = (e.x-155) + 'px'
+            cake.style.left = (e.x-150) + 'px'
             cake.style.top = (e.y-435) + 'px' 
             container.append(cake)  
         }else{
@@ -52,23 +53,45 @@ window.addEventListener('click', function(e){
             container.append(cake)   
         }
         
-        
     }else if ((buttonClicked === 'candleBtn')&&(e.target.matches('button')===false)&&(e.target.className === 'cake')){
-        const candle = document.createElement('img')
-        candle.src = 'img/candle2.png'
-        candle.setAttribute('class','candle')
-        candle.style.left = (e.x-14) + 'px'
-        candle.style.top = (e.y-112) + 'px'
+        
+        if (window.screen.width <= 500){
+            const candle = document.createElement('img')
+            candle.src = 'img/candle2.png'
+            candle.setAttribute('class','candle')
+            candle.style.left = (e.x-5) + 'px'
+            candle.style.top = (e.y-50) + 'px'
+            container.append(candle)
+        }else{
+            const candle = document.createElement('img')
+            candle.src = 'img/candle2.png'
+            candle.setAttribute('class','candle')
+            candle.style.left = (e.x-14) + 'px'
+            candle.style.top = (e.y-112) + 'px'
+            container.append(candle)
+        } 
 
-        container.append(candle)
     }else if ((buttonClicked === 'lighterBtn')&&(e.target.matches('button')===false)&&(e.target.className === 'candle')){
-        const light = document.createElement('img')
-        light.src = 'img/flame.png'
-        light.setAttribute('class','light')
-        light.style.left = (e.x-15) + 'px'
-        light.style.top = (e.y-50) + 'px'
+        
+        if (window.screen.width <= 500){
+            const light = document.createElement('img')
+            light.src = 'img/flame.png'
+            light.setAttribute('class','light')
+            light.style.left = (e.x-8) + 'px'
+            light.style.top = (e.y-20) + 'px'
+    
+            container.append(light)
+        }else{
+            const light = document.createElement('img')
+            light.src = 'img/flame.png'
+            light.setAttribute('class','light')
+            light.style.left = (e.x-15) + 'px'
+            light.style.top = (e.y-50) + 'px'
+    
+            container.append(light)
+        }
+        
 
-        container.append(light)
     }else if ((buttonClicked === 'removeBtn')&&(e.target.matches('button')===false)){
         if((e.target.className==='light')||(e.target.className==='candle')||(e.target.className==='cake')){
             console.log(e.target)

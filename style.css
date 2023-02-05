@@ -45,7 +45,6 @@ button:hover{
 
 }
 
-
 button#cake-btn::before{
     content:'🎂';
     transform: scale(5);
@@ -74,7 +73,6 @@ button#remove-btn{
     width: 60px;
     height: 40px;
 }
-
 
 .table{
     position: relative;
@@ -162,46 +160,16 @@ button#remove-btn{
     align-items: center;
     padding: 10px 10px;
 }
-/*
-@media (max-width: 768px) {
-    
-    body{
-        background: none;
-    }
 
-    #container{
-        display: none;
-    }
-    .aviso{
-        background:url(img/background.png) no-repeat center center /cover;
-        display: block;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-    }
-
-    .aviso h1{
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 15px;
-        padding: 15px;
-        background-color: rgba(183, 123, 176, 0.512);
-        border-radius: 30px;
-        color: white;
-        transform: uppercase;
-        text-align: center;
-        font-size: 2rem;
-        height: 80%;
-        display: flex;
-        align-items: center;
-    }
-
-}
-*/
 
 @media (max-width: 768px) {
+
+
+    html{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
 
     .table{
         position: relative;
@@ -220,6 +188,17 @@ button#remove-btn{
         width: 300px;
     }
     
+    .candle{
+        width: 15px;
+    }
+
+    .light{
+        width: 15px;
+    }
+    
+    .light.smoke{
+        width: 10px;
+    }
 
     .header-btns{
         width: 100vw;
