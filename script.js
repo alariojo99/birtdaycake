@@ -13,23 +13,54 @@ let buttonClicked = ''
 
 cakeBtn.addEventListener('click', function(){
     buttonClicked = 'cakeBtn'
+    cakeBtn.setAttribute('class','selected')
+
+    candleBtn.removeAttribute('class','selected')
+    lighterBtn.removeAttribute('class','selected')
+    blowBtn.removeAttribute('class','selected')
+    removeBtn.removeAttribute('class','selected')
+    
 })
 
 candleBtn.addEventListener('click', function(){
     buttonClicked = 'candleBtn'
+    candleBtn.setAttribute('class','selected')
+
+    cakeBtn.removeAttribute('class','selected')
+    lighterBtn.removeAttribute('class','selected')
+    blowBtn.removeAttribute('class','selected')
+    removeBtn.removeAttribute('class','selected')
 })
 
 lighterBtn.addEventListener('click', function(){
     buttonClicked = 'lighterBtn'
-})
+    lighterBtn.setAttribute('class','selected')
 
-removeBtn.addEventListener('click', function(){
-    buttonClicked = 'removeBtn'
+    cakeBtn.removeAtrribute('class','selected')
+    candleBtn.removeAtrribute('class','selected')
+    blowBtn.removeAtrribute('class','selected')
+    removeBtn.removeAtrribute('class','selected')
 })
 
 
 blowBtn.addEventListener('click', function(){
     buttonClicked = 'blowBtn'
+    blowBtn.setAttribute('class','selected')
+
+    cakeBtn.removeAtrribute('class','selected')
+    candleBtn.removeAtrribute('class','selected')
+    lighterBtn.removeAtrribute('class','selected')
+    removeBtn.removeAtrribute('class','selected')
+})
+
+removeBtn.addEventListener('click', function(){
+    buttonClicked = 'removeBtn'
+    removeBtn.setAttribute('class','selected')
+
+    cakeBtn.removeAtrribute('class','selected')
+    candleBtn.removeAtrribute('class','selected')
+    lighterBtn.removeAtrribute('class','selected')
+    blowBtn.removeAtrribute('class','selected')
 })
 
 
@@ -116,9 +147,8 @@ window.addEventListener('click', function(e){
 function deleteLights(){
     const lights = document.querySelectorAll('.light')
 
-    for(let i=0; i <lights.length; i++){
-        lights[i].remove()
-    }
+    lights.forEach((light)=>light.remove())
+
 
 }
 

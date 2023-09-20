@@ -38,11 +38,14 @@ button{
     margin: 35px 20px;
 }
 
+.selected{
+    opacity: 0.5;
+}
+
 button:hover{
     opacity: .5;
     cursor: pointer;
     text-decoration: none;
-
 }
 
 button#cake-btn::before{
