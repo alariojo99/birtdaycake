@@ -36,10 +36,10 @@ lighterBtn.addEventListener('click', function(){
     buttonClicked = 'lighterBtn'
     lighterBtn.setAttribute('class','selected')
 
-    cakeBtn.removeAtrribute('class','selected')
-    candleBtn.removeAtrribute('class','selected')
-    blowBtn.removeAtrribute('class','selected')
-    removeBtn.removeAtrribute('class','selected')
+    cakeBtn.removeAttribute('class','selected')
+    candleBtn.removeAttribute('class','selected')
+    blowBtn.removeAttribute('class','selected')
+    removeBtn.removeAttribute('class','selected')
 })
 
 
@@ -47,20 +47,20 @@ blowBtn.addEventListener('click', function(){
     buttonClicked = 'blowBtn'
     blowBtn.setAttribute('class','selected')
 
-    cakeBtn.removeAtrribute('class','selected')
-    candleBtn.removeAtrribute('class','selected')
-    lighterBtn.removeAtrribute('class','selected')
-    removeBtn.removeAtrribute('class','selected')
+    cakeBtn.removeAttribute('class','selected')
+    candleBtn.removeAttribute('class','selected')
+    lighterBtn.removeAttribute('class','selected')
+    removeBtn.removeAttribute('class','selected')
 })
 
 removeBtn.addEventListener('click', function(){
     buttonClicked = 'removeBtn'
     removeBtn.setAttribute('class','selected')
 
-    cakeBtn.removeAtrribute('class','selected')
-    candleBtn.removeAtrribute('class','selected')
-    lighterBtn.removeAtrribute('class','selected')
-    blowBtn.removeAtrribute('class','selected')
+    cakeBtn.removeAttribute('class','selected')
+    candleBtn.removeAttribute('class','selected')
+    lighterBtn.removeAttribute('class','selected')
+    blowBtn.removeAttribute('class','selected')
 })
 
 
